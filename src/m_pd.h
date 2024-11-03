@@ -212,21 +212,22 @@ typedef union word
     int w_index;
 } t_word;
 
-typedef enum
-{
-    A_NULL = 0,
-    A_FLOAT,
-    A_SYMBOL,
-    A_POINTER,
-    A_SEMI,
-    A_COMMA,
-    A_DEFFLOAT,
-    A_DEFSYM,
-    A_DOLLAR,
-    A_DOLLSYM,
-    A_GIMME,
-    A_CANT
-}  t_atomtype;
+typedef uint32_t t_atomtype;
+// {
+#define    A_NULL 0
+#define    A_FLOAT 1
+#define    A_SYMBOL 2
+#define    A_POINTER 3
+#define    A_SEMI 4
+#define    A_COMMA 5
+#define    A_DEFFLOAT 6
+#define    A_DEFSYM 7
+#define    A_DOLLAR 8
+#define    A_DOLLSYM 9
+#define    A_GIMME 10
+#define    A_CANT 11
+// }  t_atomtype;
+
 
 #define A_DEFSYMBOL A_DEFSYM    /* better name for this */
 
